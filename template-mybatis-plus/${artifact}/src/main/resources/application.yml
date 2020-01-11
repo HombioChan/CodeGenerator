@@ -1,0 +1,16 @@
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+      db-type: mysql
+  mapper-locations: classpath:/mapper/*.xml
+
+spring:
+  datasource:
+    driver-class-name: ${driver}
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: ${url}
+    username: ${username}
+    password: ${password}
