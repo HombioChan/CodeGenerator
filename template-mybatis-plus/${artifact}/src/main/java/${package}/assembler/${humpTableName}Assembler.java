@@ -1,16 +1,16 @@
-package ${package}.Assembler;
+package ${package}.assembler;
 
-import ${package}.dto.requset.${humpTableName}ReqDto;
-import ${package}.dto.response.${humpTableName}ResDto;
+import ${package}.dto.req.${humpTableName}ReqDto;
+import ${package}.dto.res.${humpTableName}ResDto;
 import ${package}.persistence.po.${humpTableName}Po;
 
 public class ${humpTableName}Assembler {
 
-    public static ${humpTableName}Po convert${humpTableName}ReqDtoTo${humpTableName}Po( ${humpTableName}ReqDto req){
+    public static ${humpTableName}Po convertReqDtoToPo( ${humpTableName}ReqDto req){
         return convert${humpTableName}ReqDtoTo${humpTableName}Po(null,req);
     }
 
-    public static ${humpTableName}Po convert${humpTableName}ReqDtoTo${humpTableName}Po(<#list commonFields as field><#if field.name == "id">${field.type}</#if></#list> id, ${humpTableName}ReqDto req){
+    public static ${humpTableName}Po convertReqDtoToPo(<#list commonFields as field><#if field.name == "id">${field.type}</#if></#list> id, ${humpTableName}ReqDto req){
         ${humpTableName}Po po = new ${humpTableName}Po();
         po.setId(id);
         <#list fields as field>
@@ -19,7 +19,7 @@ public class ${humpTableName}Assembler {
         return po;
     }
 
-    public static ${humpTableName}ResDto convert${humpTableName}PoTo${humpTableName}ResDto(${humpTableName}Po po){
+    public static ${humpTableName}ResDto convertPoToResDto(${humpTableName}Po po){
         if(po == null){
             return null;
         }

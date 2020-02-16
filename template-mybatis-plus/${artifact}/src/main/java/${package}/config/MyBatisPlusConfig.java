@@ -1,4 +1,4 @@
-package ${package}.configuration;
+package ${package}.config;
 
 import com.baomidou.mybatisplus.core.incrementer.IdentifierGenerator;
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import ${package}.persistence.common.TimeBaseKeyGenerator;
 
 @Component
-public class MyBatisPlusConfiguration {
+public class MyBatisPlusConfig {
     /*
     分页插件：进行分页查询时，自动更新total等字段
      */
